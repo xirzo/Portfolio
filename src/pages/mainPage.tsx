@@ -11,7 +11,12 @@ interface MainPageProps {
 
 function MainPage({ projectsSectionRef, bioSectionRef, greetingsSectionRef }: MainPageProps) {
     return (
-        <div className="vertical-stack-container">
+        <div
+            className="vertical-stack-container"
+            style={{
+                gap: '2rem'
+            }}
+        >
             <div ref={greetingsSectionRef}>
                 <Greetings
                     telegramTag={"nottt55234"}
