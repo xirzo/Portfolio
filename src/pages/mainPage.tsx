@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import Greetings from "../widgets/greetings/greetings";
 import ProjectsSection from "../widgets/projectsSection";
+import Bio from "../widgets/bio/bio";
 
 function MainPage() {
     const projectsSectionRef = useRef<HTMLDivElement>(null);
@@ -14,7 +15,13 @@ function MainPage() {
 
     return (
         <div className="vertical-stack-container">
-            <Greetings telegramTag={"nottt55234"} email={""} githubNickname={"xirzo"} onViewProjects={scrollToProjects} />
+            <Greetings
+                telegramTag={"nottt55234"}
+                email={"garrytacffgh@gmail.com"}
+                githubNickname={"xirzo"}
+                onViewProjects={scrollToProjects} />
+
+            <Bio email={"garrytacffgh@gmail.com"} />
 
             <ProjectsSection ref={projectsSectionRef} />
         </div >
