@@ -64,6 +64,16 @@ h1 h2 h3 h4 h5 h6 {
     color: var(--text);
 }
 
+a {
+    color: var(--primary);
+    transition: transform 0.18s cubic-bezier(.22, 1, .36, 1);
+}
+
+a:hover {
+    transform: scale(1.02) translateY(-1px);
+    color: var(--secondary);
+}
+
 
 .stack-container {
     display: flex;

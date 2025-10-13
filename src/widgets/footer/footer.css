@@ -1,0 +1,18 @@
+.footer {
+    width: 100%;
+    background: var(--bg);
+    color: var(--text-muted);
+    padding: 1.2rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    font-size: 1rem;
+    box-shadow: 0 -2px 8px hsla(175, 20%, 3%, 0.04);
+    letter-spacing: 0.02em;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25em;
+}
