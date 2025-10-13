@@ -12,7 +12,7 @@
     top: 0;
     background: var(--bg);
 
-    border: var(--border-card);
+    border-bottom: var(--border-card);
 }
 
 .navbar-left,
