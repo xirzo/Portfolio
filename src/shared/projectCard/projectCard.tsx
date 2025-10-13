@@ -78,7 +78,6 @@ function ProjectCard({
             >
                 <div className="project-modal-content">
 
-                    <p><strong>Description:</strong></p>
                     <p>{detailedDescription || briefDescription}</p>
 
                     {imageUrl && (

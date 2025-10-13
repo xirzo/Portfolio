@@ -5,6 +5,7 @@ import './app/global.css'
 import App from './app/App.tsx'
 
 // TODO: download link for pdf of resume
+// TODO: make navbar items look not like buttons
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>

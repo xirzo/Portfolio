@@ -8,7 +8,6 @@ function ProjectsSection({ ...props }) {
             </h3>
 
             <div className="grid-container">
-
                 <ProjectCard
                     projectName={"TicTacToe"}
                     briefDescription={"Multiplayer game, written in C"}

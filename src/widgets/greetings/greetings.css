@@ -69,6 +69,7 @@
     .greetings-section {
         align-items: start;
         padding: 1rem;
+        min-height: 60vh;
     }
 
     .greetings-buttons-container {

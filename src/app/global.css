@@ -132,6 +132,14 @@ body.light {
     grid-column: 1 / span 2;
 }
 
+.app {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex: 1;
+    padding: 1rem;
+}
+
 @media (max-width: 600px) {
     .grid-container {
         grid-template-columns: 1fr;

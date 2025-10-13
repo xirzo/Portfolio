@@ -38,12 +38,7 @@ function App() {
         }}>
             <Navbar items={navbarItems} />
 
-            <div style={{
-                width: '100%',
-                maxWidth: '1400px',
-                margin: '0 auto',
-                flex: 1,
-            }}>
+            <div className="app">
                 <MainPage
                     projectsSectionRef={projectsSectionRef}
                     bioSectionRef={bioSectionRef}
