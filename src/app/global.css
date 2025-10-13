@@ -100,24 +100,14 @@ a:hover {
 }
 
 @keyframes gradient-move {
-    0% {
+
+    0%,
+    100% {
         background-position: 0% 50%;
     }
 
-    100% {
+    50% {
         background-position: 100% 50%;
-    }
-}
-
-@keyframes scale-in {
-    0% {
-        transform: scale(0.9);
-        opacity: 0;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
     }
 }
 
@@ -136,6 +126,6 @@ a:hover {
     color: transparent;
     -webkit-text-fill-color: transparent;
     font-size: clamp(2rem, 7vw, 5rem);
-    animation: gradient-move 8s ease-in-out infinite, pulse-shadow 3s ease-in-out infinite, scale-in 0.8s cubic-bezier(.22, 1, .36, 1) 0s 1;
+    animation: gradient-move 4s ease-in-out infinite;
     transition: transform 0.18s cubic-bezier(.22, 1, .36, 1);
 }
