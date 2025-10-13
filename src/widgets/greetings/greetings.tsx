@@ -7,9 +7,10 @@ export interface GreetingsProps {
     telegramTag: string;
     email: string;
     githubNickname: string;
+    onViewProjects: () => void;
 }
 
-function Greetings({ telegramTag, email, githubNickname }: GreetingsProps) {
+function Greetings({ telegramTag, email, githubNickname, onViewProjects }: GreetingsProps) {
     return (
         <section className="greetings-section">
             <div className="greetings-content">
@@ -24,7 +25,7 @@ function Greetings({ telegramTag, email, githubNickname }: GreetingsProps) {
                 </h2>
 
                 <p className="greetings-description">
-                    Passionate about software development, algorithms, and building innovative solutions.
+                    I know nobody is gonna read this, so...
                 </p>
 
                 <div className="greetings-buttons-container">
@@ -32,7 +33,7 @@ function Greetings({ telegramTag, email, githubNickname }: GreetingsProps) {
                         Get Resume
                     </Button>
 
-                    <Button>
+                    <Button onClick={onViewProjects}>
                         View Projects
                     </Button>
                 </div>
