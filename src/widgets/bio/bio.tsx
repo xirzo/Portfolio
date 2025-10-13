@@ -38,7 +38,7 @@ function Bio({ email }: BioProps) {
                                 ITMO University
                             </h5>
                             <p>
-                                Bachelor of Computer Science
+                                Bachelor of Software Engineering
                                 <br />
                                 Expected Graduation: 2028
                             </p>
