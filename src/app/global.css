@@ -45,8 +45,8 @@ body.light {
     --highlight: hsl(175 100% 97%);
     --border: hsl(175 11% 48%);
     --border-muted: hsl(175 13% 59%);
-    --primary: hsl(178 100% 8%);
-    --secondary: hsl(348 44% 31%);
+    --primary: hsl(152 12% 35%);
+    --secondary: hsl(217 20% 40%);
     --danger: hsl(9 21% 41%);
     --warning: hsl(52 23% 34%);
     --success: hsl(147 19% 36%);
