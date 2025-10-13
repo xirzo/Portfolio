@@ -91,6 +91,10 @@ a:hover {
     padding: 1rem;
 }
 
+.wide-row {
+    grid-column: 1 / span 2;
+}
+
 @media (max-width: 600px) {
     .grid-container {
         grid-template-columns: 1fr;
