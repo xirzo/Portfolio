@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import Button from "./button/button";
+import IconButton from "./iconButton/iconButton";
 
 function ThemeSwitcher() {
     const getInitialTheme = () => {
         return localStorage.getItem("theme") || "dark";
     }
 
-    const [theme, setTheme] = useState(getInitialTheme);
+    const [theme, setTheme] = useState<string>(getInitialTheme);
 
     useEffect(() => {
         document.body.classList.toggle("light", theme === "light");
@@ -14,9 +14,12 @@ function ThemeSwitcher() {
     }, [theme]);
 
     return (
-        <Button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-            Switch to {theme === "light" ? "Dark" : "Light"} Theme
-        </Button>
+        <IconButton size='xl' onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+            {theme === 'dark'
+                ? <i className="fa-solid fa-sun" />
+                : <i className="fa-solid fa-moon" />
+            }
+        </IconButton>
     );
 }
 
