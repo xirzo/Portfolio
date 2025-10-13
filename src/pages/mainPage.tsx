@@ -3,18 +3,12 @@ import ThemeSwitcher from "../shared/themeSwitcher";
 
 function MainPage() {
     return (
-        <>
-            <ThemeSwitcher />
+        <div className="stack-container">
+            <h1 className="page-title">
+                Hello. I am xirzo
+            </h1>
+            <div className="grid-container">
 
-            <div
-                style={{
-                    marginTop: '1rem',
-                    display: 'grid',
-                    gridTemplateColumns: '1fr 1fr',
-                    gap: '2rem',
-                    maxHeight: '100vh',
-                }}
-            >
                 <Card>
                     <h1>Sharp heading</h1>
                     <p>A muted shade for the rest of the text.</p>
@@ -27,7 +21,7 @@ function MainPage() {
                     <ThemeSwitcher />
                 </Card>
             </div>
-        </>
+        </div>
     );
 }
 
