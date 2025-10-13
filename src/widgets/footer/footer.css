@@ -16,3 +16,7 @@
     align-items: center;
     gap: 0.25em;
 }
+
+.footer-content a {
+    text-decoration: none;
+}
