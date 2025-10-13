@@ -3,11 +3,13 @@ import './button.css';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
+    variant?: 'default' | 'text';
 }
 
-function Button({ children, ...props }: ButtonProps) {
+function Button({ children, variant = 'default', ...props }: ButtonProps) {
     return (
-        <button className="button" {...props}>
+        <button
+            className={`button ${variant === 'text' ? 'button-text' : ''}`} {...props}>
             {children}
         </button>
     );

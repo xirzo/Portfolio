@@ -23,3 +23,23 @@
 .button:active {
     transform: translateY(0.1px) scale(0.99);
 }
+
+.button.button-text {
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0.5rem 1rem;
+}
+
+.button.button-text:hover,
+.button.button-text:focus-visible {
+    background: none;
+    transform: none;
+    box-shadow: none;
+    color: var(--highlight);
+}
+
+.button.button-text:active {
+    transform: none;
+}

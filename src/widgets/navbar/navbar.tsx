@@ -24,6 +24,7 @@ function Navbar({ items }: NavbarProps) {
                         <Button
                             key={x.name}
                             onClick={x.onClick}
+                            variant='text'
                         >
                             {x.name}
                         </Button>
