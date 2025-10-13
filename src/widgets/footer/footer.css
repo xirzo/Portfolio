@@ -4,10 +4,11 @@
     color: var(--text-muted);
     padding: 1.2rem 0;
     text-align: center;
-    border-top: 1px solid var(--border);
     font-size: 1rem;
-    box-shadow: 0 -2px 8px hsla(175, 20%, 3%, 0.04);
     letter-spacing: 0.02em;
+    margin-top: 2rem;
+    border-top: var(--border-card);
+    box-shadow: var(--shadow);
 }
 
 .footer-content {
