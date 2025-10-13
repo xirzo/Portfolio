@@ -1,0 +1,8 @@
+.project-link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.project-link h2 {
+    margin: 0;
+}

@@ -1,50 +1,15 @@
-import Button from "../shared/button/button";
-import Card from "../shared/card/card";
+import ProjectCard from "../shared/projectCard/projectCard";
 
 function ProjectsSection() {
     return (
         <section className="grid-container">
-            <Card>
-                <h1>Sharp heading</h1>
-                <p>A muted shade for the rest of the text.</p>
-                <Button>
-                    Some Action
-                </Button>
-            </Card>
-
-            <Card>
-                <h1>Sharp heading</h1>
-                <p>A muted shade for the rest of the text.</p>
-                <Button>
-                    Some Action
-                </Button>
-            </Card>
-
+            <ProjectCard projectName={"Test project"} description={"Test description"} link={""} />
+            <ProjectCard projectName={"Test project"} description={"Test description"} link={""} />
             <div className="wide-row">
-                <Card>
-                    <h1>Sharp heading</h1>
-                    <p>A muted shade for the rest of the text.</p>
-                    <Button>
-                        Some Action
-                    </Button>
-                </Card>
+                <ProjectCard projectName={"Test project"} description={"Test description"} link={""} />
             </div>
-
-            <Card>
-                <h1>Sharp heading</h1>
-                <p>A muted shade for the rest of the text.</p>
-                <Button>
-                    Some Action
-                </Button>
-            </Card>
-
-            <Card>
-                <h1>Sharp heading</h1>
-                <p>A muted shade for the rest of the text.</p>
-                <Button>
-                    Some Action
-                </Button>
-            </Card>
+            <ProjectCard projectName={"Test project"} description={"Test description"} link={""} />
+            <ProjectCard projectName={"Test project"} description={"Test description"} link={""} />
         </section>
     )
 }
