@@ -1,0 +1,22 @@
+services:
+  portfolio-frontend:
+    image: ghcr.io/xirzo/portfolio:latest
+    networks:
+      - traefik_proxy
+    deploy:
+      labels:
+        - "traefik.enable=true"
+
+        - "traefik.http.routers.portfolio-frontend.rule=Host(`xirzo.ru`)"
+        - "traefik.http.routers.portfolio-frontend.entrypoints=https"
+        - "traefik.http.routers.portfolio-frontend.tls.certresolver=letsencrypt"
+        - "traefik.http.services.portfolio-frontend.loadbalancer.server.port=80"
+
+        - "traefik.http.routers.portfolio-frontend-http.rule=Host(`xirzo.ru`)"
+        - "traefik.http.routers.portfolio-frontend-http.entrypoints=http"
+        - "traefik.http.routers.portfolio-frontend-http.middlewares=portfolio-frontend-redirect-to-https"
+        - "traefik.http.middlewares.portfolio-frontend-redirect-to-https.redirectscheme.scheme=https"
+
+networks:
+  traefik_proxy:
+    external: true
