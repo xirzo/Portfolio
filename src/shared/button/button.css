@@ -5,9 +5,22 @@
     color: var(--text);
     border: var(--border-card);
     border-top: solid 1px var(--highlight);
-
     border-radius: 0.5rem;
     margin-top: 1.5rem;
-
     box-shadow: var(--shadow);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+
+.button:hover,
+.button:focus-visible {
+    background: var(--highlight);
+    color: var(--text-muted);
+    box-shadow: 0 4px 16px var(--shadow);
+    transform: translateY(-2px) scale(1.03);
+    outline: none;
+    cursor: pointer;
+}
+
+.button:active {
+    transform: translateY(0.1px) scale(0.99);
 }
