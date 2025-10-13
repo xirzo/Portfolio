@@ -1,0 +1,61 @@
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --gradient: linear-gradient(0deg, var(--bg) 95%, var(--bg-light));
+    --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
+
+    --bg-dark: hsl(175 83% 1%);
+    --bg: hsl(175 49% 3%);
+    --bg-light: hsl(175 27% 8%);
+    --text: hsl(175 70% 92%);
+    --text-muted: hsl(175 16% 67%);
+    --highlight: hsl(175 14% 36%);
+    --border: hsl(175 19% 25%);
+    --border-muted: hsl(176 31% 15%);
+    --primary: hsl(176 49% 56%);
+    --secondary: hsl(351 65% 75%);
+    --danger: hsl(9 26% 64%);
+    --warning: hsl(52 19% 57%);
+    --success: hsl(146 17% 59%);
+    --info: hsl(217 28% 65%);
+
+    --border-card: solid 1px var(--border);
+
+    --shadow: 0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 4px 4px hsla(0, 0%, 0%, 0.15)
+}
+
+body.light {
+    --gradient: linear-gradient(0deg, var(--bg) 95%, var(--bg-light));
+    --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
+
+    --bg-dark: hsl(174 23% 88%);
+    --bg: hsl(174 42% 93%);
+    --bg-light: hsl(174 100% 99%);
+    --text: hsl(176 100% 3%);
+    --text-muted: hsl(175 19% 25%);
+    --highlight: hsl(175 100% 97%);
+    --border: hsl(175 11% 48%);
+    --border-muted: hsl(175 13% 59%);
+    --primary: hsl(178 100% 8%);
+    --secondary: hsl(348 44% 31%);
+    --danger: hsl(9 21% 41%);
+    --warning: hsl(52 23% 34%);
+    --success: hsl(147 19% 36%);
+    --info: hsl(217 22% 41%);
+
+    --border-card: solid 1px var(--bg);
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-muted)
+}

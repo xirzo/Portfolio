@@ -1,0 +1,16 @@
+.card {
+    background: var(--gradient);
+    padding: 1em;
+    border-radius: 1rem;
+    border: var(--border-card);
+    border-top: solid 1px var(--highlight);
+    box-shadow: var(--shadow);
+}
+
+.card:hover {
+    background: var(--gradient-hover);
+}
+
+.card>* {
+    margin-top: 0.1em;
+}

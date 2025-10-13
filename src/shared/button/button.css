@@ -1,0 +1,13 @@
+.button {
+    background: var(--bg-light);
+    padding: 0.5rem 1rem 0.7rem 1rem;
+    font-weight: 700;
+    color: var(--text);
+    border: var(--border-card);
+    border-top: solid 1px var(--highlight);
+
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+
+    box-shadow: var(--shadow);
+}
