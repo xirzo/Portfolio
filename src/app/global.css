@@ -101,6 +101,10 @@ a:hover {
         gap: 1rem;
         padding: 0.5rem;
     }
+
+    .wide-row {
+        grid-column: 1;
+    }
 }
 
 @keyframes gradient-move {
