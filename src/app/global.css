@@ -1,5 +1,5 @@
 :root {
-    font-family: Inter, system-ui, Helvetica, sans-serif;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
 
@@ -99,8 +99,19 @@ h1 h2 h3 h4 h5 h6 {
     }
 }
 
+@keyframes scale-in {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 .page-title {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-size: 5rem;
     font-weight: 900;
     margin-top: 1rem;
@@ -114,5 +125,7 @@ h1 h2 h3 h4 h5 h6 {
     -webkit-background-clip: text;
     color: transparent;
     -webkit-text-fill-color: transparent;
-    animation: gradient-move 8s ease-in-out infinite;
+    font-size: clamp(2rem, 7vw, 5rem);
+    animation: gradient-move 8s ease-in-out infinite, pulse-shadow 3s ease-in-out infinite, scale-in 0.8s cubic-bezier(.22, 1, .36, 1) 0s 1;
+    transition: transform 0.18s cubic-bezier(.22, 1, .36, 1);
 }

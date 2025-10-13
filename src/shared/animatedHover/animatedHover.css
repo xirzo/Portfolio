@@ -1,0 +1,4 @@
+.animated-hover {
+    transition: transform 0.18s cubic-bezier(.22, 1, .36, 1);
+    will-change: transform;
+}

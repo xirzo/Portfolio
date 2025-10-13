@@ -1,12 +1,16 @@
+import AnimatedHover from "../shared/animatedHover/animatedHover";
 import Button from "../shared/button/button";
 import Card from "../shared/card/card";
 
 function MainPage() {
     return (
         <div className="stack-container">
-            <h1 className="page-title">
-                Hello. I am xirzo
-            </h1>
+            <AnimatedHover>
+                <h1 className="page-title">
+                    Hello. I am xirzo
+                </h1>
+            </AnimatedHover>
+
             <div className="grid-container">
 
                 <Card>
