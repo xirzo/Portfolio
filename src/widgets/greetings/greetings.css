@@ -1,0 +1,29 @@
+.greetings-title {
+    font-size: 5rem;
+    font-weight: 900;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--primary));
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(2rem, 7vw, 5rem);
+    animation: gradient-move 4s ease-in-out infinite;
+    transition: transform 0.18s cubic-bezier(.22, 1, .36, 1);
+}
+
+@keyframes gradient-move {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}

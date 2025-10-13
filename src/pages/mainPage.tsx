@@ -1,16 +1,12 @@
-import AnimatedHover from "../shared/animatedHover/animatedHover";
 import Button from "../shared/button/button";
 import Card from "../shared/card/card";
+import Greetings from "../widgets/greetings/greetings";
 import ProjectsSection from "../widgets/projectsSection";
 
 function MainPage() {
     return (
-        <div className="stack-container">
-            <AnimatedHover>
-                <h1 className="page-title">
-                    Hello. I am xirzo
-                </h1>
-            </AnimatedHover>
+        <div className="vertical-stack-container">
+            <Greetings />
 
             <ProjectsSection />
 

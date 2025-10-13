@@ -109,11 +109,16 @@ body.light {
     --border-card: solid 1px var(--bg);
 }
 
-.stack-container {
+.vertical-stack-container {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    text-align: left;
+}
+
+.horizontal-stack-container {
+    display: flex;
+    flex-direction: horizontal;
+    gap: 0.5rem;
 }
 
 .grid-container {
