@@ -18,7 +18,7 @@ function App() {
             }}>
                 <MainPage />
             </div>
-            <Footer />
+            <Footer githubUrl={"https://github.com/xirzo"} />
         </div>
     )
 }
