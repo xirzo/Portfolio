@@ -12,13 +12,13 @@ function App() {
             <Navbar />
             <div style={{
                 width: '100%',
-                maxWidth: '700px',
+                maxWidth: '1400px',
                 margin: '0 auto',
                 flex: 1,
             }}>
                 <MainPage />
             </div>
-            <Footer githubUrl={"https://github.com/xirzo"} />
+            <Footer githubUrl={'xirzo'} />
         </div>
     )
 }
