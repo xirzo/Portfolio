@@ -7,7 +7,6 @@ import App from './app/App.tsx'
 // TODO: download link for pdf of resume
 // TODO: add bio
 // TODO: add projects descriptions
-// TODO: add icon
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
