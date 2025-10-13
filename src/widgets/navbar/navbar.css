@@ -1,5 +1,4 @@
 .navbar {
-    gap: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -13,7 +12,24 @@
     top: 0;
     background: var(--bg);
 
-    border: var(--border-card)
+    border: var(--border-card);
+}
+
+.navbar-left,
+.navbar-center,
+.navbar-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-center {
+    justify-content: center;
+    gap: 1rem;
+}
+
+.navbar-right {
+    justify-content: flex-end;
 }
 
 .navbar>* {

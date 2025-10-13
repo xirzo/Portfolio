@@ -1,29 +1,35 @@
-import { useRef } from "react";
 import Greetings from "../widgets/greetings/greetings";
 import ProjectsSection from "../widgets/projectsSection";
 import Bio from "../widgets/bio/bio";
+import type { RefObject } from "react";
 
-function MainPage() {
-    const projectsSectionRef = useRef<HTMLDivElement>(null);
+interface MainPageProps {
+    projectsSectionRef: RefObject<HTMLDivElement | null>;
+    bioSectionRef: RefObject<HTMLDivElement | null>;
+    greetingsSectionRef: RefObject<HTMLDivElement | null>;
+}
 
-    const scrollToProjects = () => {
-        projectsSectionRef.current?.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    };
-
+function MainPage({ projectsSectionRef, bioSectionRef, greetingsSectionRef }: MainPageProps) {
     return (
         <div className="vertical-stack-container">
-            <Greetings
-                telegramTag={"nottt55234"}
-                email={"garrytacffgh@gmail.com"}
-                githubNickname={"xirzo"}
-                onViewProjects={scrollToProjects} />
+            <div ref={greetingsSectionRef}>
+                <Greetings
+                    telegramTag={"nottt55234"}
+                    email={"garrytacffgh@gmail.com"}
+                    githubNickname={"xirzo"}
+                    onViewProjects={() => projectsSectionRef.current?.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    })} />
+            </div>
 
-            <Bio email={"garrytacffgh@gmail.com"} />
+            <div ref={bioSectionRef}>
+                <Bio email={"garrytacffgh@gmail.com"} />
+            </div>
 
-            <ProjectsSection ref={projectsSectionRef} />
+            <div ref={projectsSectionRef}>
+                <ProjectsSection />
+            </div>
         </div >
     );
 }

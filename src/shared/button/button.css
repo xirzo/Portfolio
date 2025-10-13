@@ -6,7 +6,6 @@
     border: var(--border-card);
     border-top: solid 1px var(--highlight);
     border-radius: 0.5rem;
-    margin-top: 1.5rem;
     box-shadow: var(--shadow);
     transition: color 0.2s, box-shadow 0.2s, transform 0.1s;
 }
