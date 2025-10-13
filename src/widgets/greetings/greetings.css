@@ -1,7 +1,19 @@
+.greetings-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.greetings-content {
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+}
+
 .greetings-title {
     font-size: 5rem;
     font-weight: 900;
-    margin-top: 1rem;
     margin-bottom: 2rem;
     line-height: 1.1;
     letter-spacing: 0.02em;
@@ -11,7 +23,7 @@
     -webkit-background-clip: text;
     color: transparent;
     -webkit-text-fill-color: transparent;
-    font-size: clamp(2rem, 7vw, 5rem);
+    font-size: clamp(3rem, 8vw, 5rem);
     animation: gradient-move 4s ease-in-out infinite;
     transition: transform 0.18s cubic-bezier(.22, 1, .36, 1);
 }
@@ -25,5 +37,41 @@
 
     50% {
         background-position: 100% 50%;
+    }
+}
+
+.greetings-subtitle {
+    font-size: clamp(1.5rem, 4vw, 1.75rem);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.greetings-description {
+    font-size: clamp(1.1rem, 3vw, 1.125rem);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.greetings-buttons-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.greetings-social-container {
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 900px) {
+    .greetings-section {
+        align-items: start;
+        padding: 1rem;
+    }
+
+    .greetings-buttons-container {
+        gap: 0.75rem;
     }
 }

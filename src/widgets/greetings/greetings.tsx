@@ -11,30 +11,23 @@ export interface GreetingsProps {
 
 function Greetings({ telegramTag, email, githubNickname }: GreetingsProps) {
     return (
-        <section
-            className="vertical-stack-container"
-            style={{
-                minHeight: '100vh',
-                justifyContent: 'center'
-            }}>
-            <div style={{
-                width: '60%'
-            }}>
+        <section className="greetings-section">
+            <div className="greetings-content">
                 <AnimatedHover>
                     <h1 className="greetings-title">
                         Hello, I am Aleksandr Zhidkov
                     </h1>
                 </AnimatedHover>
 
-                <h2>
+                <h2 className="greetings-subtitle">
                     Software Engineering Student at ITMO University
                 </h2>
 
-                <p>
+                <p className="greetings-description">
                     Passionate about software development, algorithms, and building innovative solutions.
                 </p>
 
-                <div className="horizontal-stack-container">
+                <div className="greetings-buttons-container">
                     <Button>
                         Get Resume
                     </Button>
@@ -44,11 +37,7 @@ function Greetings({ telegramTag, email, githubNickname }: GreetingsProps) {
                     </Button>
                 </div>
 
-                <div
-                    className="horizontal-stack-container"
-                    style={{
-                        marginTop: '1rem'
-                    }}>
+                <div className="greetings-social-container">
                     <IconButton
                         href={`https://github.com/${githubNickname}`}
                         target="_blank"
