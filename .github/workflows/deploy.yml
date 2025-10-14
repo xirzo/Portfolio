@@ -1,0 +1,54 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ "main" ]
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: xirzo/portfolio
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Log in to the GitHub Container Registry
+        run: echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      - name: Build the Docker image
+        run: docker build -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest .
+
+      - name: Push the Docker image
+        run: docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build-and-push
+    
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Log in to the GitHub Container Registry
+        run: echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      - name: Set up SSH key
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          echo "${{ secrets.SWARM_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -p "${{ secrets.SWARM_SSH_PORT }}" "${{ secrets.SWARM_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Create Docker context
+        run: |
+          docker context inspect portfolio >/dev/null 2>&1 || \
+          docker context create portfolio --docker "host=ssh://${{ secrets.SWARM_USERNAME }}@${{ secrets.SWARM_HOST }}:${{ secrets.SWARM_SSH_PORT }}"
+
+      - name: Use Swarm context
+        run: docker context use portfolio
+
+      - name: Deploy to Swarm
+        run: docker stack deploy portfolio -c docker-stack.yml --with-registry-auth
