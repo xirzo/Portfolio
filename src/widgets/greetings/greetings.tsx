@@ -1,7 +1,9 @@
+import { useState } from "react";
 import AnimatedHover from "../../shared/animatedHover/animatedHover";
 import Button from "../../shared/button/button";
 import IconButton from "../../shared/iconButton/iconButton";
 import './greetings.css'
+import NotificationPopup from "../../shared/notificationPopup/notificationPopup";
 
 export interface GreetingsProps {
     telegramTag: string;
@@ -11,6 +13,8 @@ export interface GreetingsProps {
 }
 
 function Greetings({ telegramTag, email, githubNickname, onViewProjects }: GreetingsProps) {
+    const [isNotificationShown, setIsNotificationShown] = useState(false);
+
     return (
         <section className="greetings-section">
             <div className="greetings-content">
@@ -29,9 +33,15 @@ function Greetings({ telegramTag, email, githubNickname, onViewProjects }: Greet
                 </p>
 
                 <div className="greetings-buttons-container">
-                    <Button>
+                    <Button onClick={() => setIsNotificationShown(true)}>
                         Get Resume
                     </Button>
+
+                    <NotificationPopup
+                        message="Resume is not uploaded yet..."
+                        isVisible={isNotificationShown}
+                        onClose={() => setIsNotificationShown(false)}
+                    />
 
                     <Button onClick={onViewProjects}>
                         View Projects
