@@ -1,5 +1,5 @@
 .greetings-section {
-    min-height: 100vh;
+    min-height: 87.75vh;
     display: flex;
     align-items: center;
     padding: 2rem 1rem;
@@ -67,9 +67,10 @@
 
 @media (max-width: 900px) {
     .greetings-section {
+        margin-top: 5vh;
         align-items: start;
         padding: 1rem;
-        min-height: 60vh;
+        min-height: 76vh;
     }
 
     .greetings-buttons-container {
