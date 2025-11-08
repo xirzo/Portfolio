@@ -20,6 +20,23 @@ function Bio({ email }: BioProps) {
                             &nbsp;
                             Bio
                         </h4>
+                        <div className="content-section">
+                            <p>
+                                Alongside my studies at ITMO, I dedicate time to experimenting with home lab setups and writing code for personal projects.
+                            </p>
+
+                            <p>
+                                I like figuring out how things work by building them and also really favor recreational programming.
+                            </p>
+
+                            <p>
+                                Looking forward to applying this approach to real-world development problems.
+                            </p>
+
+                            <p>
+                                Already had real-life work experience on online math school <a target='_blank' rel='noopener noreferrer' href='https://minimath239.ru'> minimath239</a> as a frontend developer.
+                            </p>
+                        </div>
                     </div>
                 </Card>
 
@@ -67,8 +84,8 @@ function Bio({ email }: BioProps) {
                         </div>
                     </div>
                 </Card>
-            </div>
-        </section>
+            </div >
+        </section >
     )
 }
 
