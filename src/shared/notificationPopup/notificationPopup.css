@@ -22,6 +22,7 @@
 
 .close-button {
     background: none;
+    color: var(--text-muted);
     border: none;
     font-size: 20px;
     cursor: pointer;
