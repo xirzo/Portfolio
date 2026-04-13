@@ -13,7 +13,7 @@ npm run dev
 # Deployment
 
 ```sh
-docker build -t ghcr.io/xirzo/portfolio:latest .
+docker build --build-arg VITE_BLOG_URL=https://blog.xirzo.ru -t ghcr.io/xirzo/portfolio:latest .
 ```
 
 ```sh
