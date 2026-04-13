@@ -20,7 +20,7 @@ jobs:
 
       - name: Build the Docker image
         run: docker build \
-          --build-arg VITE_BLOG_URL=${{ env.BLOG_URL }} \
+          --build-arg VITE_BLOG_URL=${{ secrets.BLOG_URL }} \
           -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest .
 
       - name: Push the Docker image
