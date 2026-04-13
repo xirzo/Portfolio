@@ -27,6 +27,10 @@ function App() {
         {
             name: "Projects",
             onClick: () => scrollToSection(projectsSectionRef)
+        },
+        {
+            name: "Blog",
+            onClick: () => window.location.href = import.meta.env.VITE_BLOG_URL
         }
     ];
 
