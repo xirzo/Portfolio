@@ -19,7 +19,9 @@ jobs:
         run: echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
       - name: Build the Docker image
-        run: docker build -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest .
+        run: docker build \
+          --build-arg VITE_BLOG_URL=${{ env.BLOG_URL }} \
+          -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest .
 
       - name: Push the Docker image
         run: docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
