@@ -1,4 +1,4 @@
-import { useState, type HTMLAttributes } from "react";
+import {useState, type HTMLAttributes, type ReactNode} from "react";
 import Button from "../button/button";
 import Card from "../card/card";
 import './projectCard.css'
@@ -8,7 +8,7 @@ interface ProjectCardProps extends HTMLAttributes<HTMLDivElement> {
     projectName: string;
     briefDescription: string;
     link: string;
-    detailedDescription: string;
+    detailedDescription: ReactNode;
     imageUrl?: string;
     imageAlt?: string;
 }

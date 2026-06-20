@@ -1,6 +1,6 @@
 import ProjectCard from "../shared/projectCard/projectCard";
 
-function ProjectsSection({ ...props }) {
+function ProjectsSection({...props}) {
     return (
         <section {...props}>
             <h3>
@@ -9,19 +9,24 @@ function ProjectsSection({ ...props }) {
 
             <div className="grid-container">
                 <ProjectCard
+                    projectName={"Xirblog"}
+                    briefDescription={".NET Microservices blog application"}
+                    link={"https://github.com/Xirblog"}
+                    detailedDescription={
+                        <>
+                            A web application I built to practice microservices architecture. Currently being developed
+                            with a small team of 2 people. Supports Markdown markup language for writing posts. <a href={import.meta.env.VITE_BLOG_URL}>Visit the blog</a>
+                        </>
+                    }
+                    imageUrl=""
+                />
+
+                <ProjectCard
                     projectName={"TicTacToe"}
                     briefDescription={"Multiplayer game, written in C"}
                     link={"https://github.com/xirzo/TicTacToe"}
                     detailedDescription={""}
                     imageUrl="/tictactoe.png"
-                />
-
-                <ProjectCard
-                    projectName={"Breakout"}
-                    briefDescription={"Game made with Raylib and Box2D"}
-                    link={"https://github.com/xirzo/Breakout"}
-                    detailedDescription={""}
-                    imageUrl="/breakout.png"
                 />
 
                 <div className="wide-row">
@@ -42,11 +47,19 @@ function ProjectsSection({ ...props }) {
                 />
 
                 <ProjectCard
-                    projectName={"Group Queue"}
-                    briefDescription={"App that is used to manage group queues"}
-                    link={"https://github.com/xirzo/GroupQueue"}
+                    projectName={"Breakout"}
+                    briefDescription={"Game made with Raylib and Box2D"}
+                    link={"https://github.com/xirzo/Breakout"}
                     detailedDescription={""}
+                    imageUrl="/breakout.png"
                 />
+
+                {/*<ProjectCard*/}
+                {/*    projectName={"Group Queue"}*/}
+                {/*    briefDescription={"App that is used to manage group queues"}*/}
+                {/*    link={"https://github.com/xirzo/GroupQueue"}*/}
+                {/*    detailedDescription={""}*/}
+                {/*/>*/}
             </div>
         </section>
     )
