@@ -5,7 +5,6 @@ import Navbar from "../widgets/navbar/navbar";
 
 function App() {
     const projectsSectionRef = useRef<HTMLDivElement>(null);
-    const bioSectionRef = useRef<HTMLDivElement>(null);
     const greetingsSectionRef = useRef<HTMLDivElement>(null);
 
     const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
@@ -19,10 +18,6 @@ function App() {
         {
             name: "Home",
             onClick: () => scrollToSection(greetingsSectionRef)
-        },
-        {
-            name: "About",
-            onClick: () => scrollToSection(bioSectionRef)
         },
         {
             name: "Projects",
@@ -45,7 +40,6 @@ function App() {
             <div className="app">
                 <MainPage
                     projectsSectionRef={projectsSectionRef}
-                    bioSectionRef={bioSectionRef}
                     greetingsSectionRef={greetingsSectionRef}
                 />
             </div>

@@ -4,7 +4,7 @@ function ProjectsSection({...props}) {
     return (
         <section {...props}>
             <h3>
-                Projects
+                projects
             </h3>
 
             <div className="grid-container">
@@ -19,6 +19,7 @@ function ProjectsSection({...props}) {
                         </>
                     }
                     imageUrl=""
+                    techTags={[".net", "microservices", "docker"]}
                 />
 
                 <ProjectCard
@@ -27,6 +28,7 @@ function ProjectsSection({...props}) {
                     link={"https://github.com/xirzo/TicTacToe"}
                     detailedDescription={""}
                     imageUrl="/tictactoe.png"
+                    techTags={["raylib", "c", "networking"]}
                 />
 
                 <div className="wide-row">
@@ -36,6 +38,7 @@ function ProjectsSection({...props}) {
                         link={"https://github.com/xirzo/MultiplayerPong"}
                         detailedDescription={""}
                         imageUrl="/pong.png"
+                        techTags={["c", "flecs", "ecs", "networking", "raylib"]}
                     />
                 </div>
 
@@ -44,6 +47,7 @@ function ProjectsSection({...props}) {
                     briefDescription={"Lightweight Dependency Injection library"}
                     link={"https://github.com/xirzo/XirzoDIContainer"}
                     detailedDescription={""}
+                    techTags={["c#", "solid", "ioc"]}
                 />
 
                 <ProjectCard
@@ -52,14 +56,8 @@ function ProjectsSection({...props}) {
                     link={"https://github.com/xirzo/Breakout"}
                     detailedDescription={""}
                     imageUrl="/breakout.png"
+                    techTags={["c", "raylib", "box2d"]}
                 />
-
-                {/*<ProjectCard*/}
-                {/*    projectName={"Group Queue"}*/}
-                {/*    briefDescription={"App that is used to manage group queues"}*/}
-                {/*    link={"https://github.com/xirzo/GroupQueue"}*/}
-                {/*    detailedDescription={""}*/}
-                {/*/>*/}
             </div>
         </section>
     )

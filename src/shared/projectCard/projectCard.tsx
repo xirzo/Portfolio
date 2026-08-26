@@ -11,6 +11,7 @@ interface ProjectCardProps extends HTMLAttributes<HTMLDivElement> {
     detailedDescription: ReactNode;
     imageUrl?: string;
     imageAlt?: string;
+    techTags?: string[];
 }
 
 function ProjectCard({
@@ -20,6 +21,7 @@ function ProjectCard({
     detailedDescription,
     imageUrl,
     imageAlt = `${projectName} screenshot`,
+    techTags,
     ...props
 }: ProjectCardProps) {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -52,6 +54,14 @@ function ProjectCard({
                     <p>
                         {briefDescription}
                     </p>
+
+                    {techTags && techTags.length > 0 && (
+                        <div className="tech-tags">
+                            {techTags.map(tag => (
+                                <span key={tag} className="tech-tag">{tag}</span>
+                            ))}
+                        </div>
+                    )}
 
                     <div className="project-actions">
                         <Button onClick={handleLearnClick}>

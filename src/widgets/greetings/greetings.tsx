@@ -1,9 +1,7 @@
-import { useState } from "react";
 import AnimatedHover from "../../shared/animatedHover/animatedHover";
 import Button from "../../shared/button/button";
 import IconButton from "../../shared/iconButton/iconButton";
 import './greetings.css'
-import NotificationPopup from "../../shared/notificationPopup/notificationPopup";
 
 export interface GreetingsProps {
     telegramTag: string;
@@ -13,36 +11,20 @@ export interface GreetingsProps {
 }
 
 function Greetings({ telegramTag, email, githubNickname, onViewProjects }: GreetingsProps) {
-    const [isNotificationShown, setIsNotificationShown] = useState(false);
-
     return (
         <section className="greetings-section">
             <div className="greetings-content">
                 <AnimatedHover>
                     <h1 className="greetings-title">
-                        Hello, I am Aleksandr Zhidkov
+                        Hello, my name<br />is xirzo
                     </h1>
                 </AnimatedHover>
 
                 <h2 className="greetings-subtitle">
-                    Software Engineering Student at ITMO University
+                    mai do "ba ba ba" and "wha wha wha"
                 </h2>
 
-                <p className="greetings-description">
-                    I know nobody is gonna read this, so...
-                </p>
-
                 <div className="greetings-buttons-container">
-                    <Button onClick={() => setIsNotificationShown(true)}>
-                        Get Resume
-                    </Button>
-
-                    <NotificationPopup
-                        message="Resume is not uploaded yet..."
-                        isVisible={isNotificationShown}
-                        onClose={() => setIsNotificationShown(false)}
-                    />
-
                     <Button onClick={onViewProjects}>
                         View Projects
                     </Button>

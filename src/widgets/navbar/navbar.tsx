@@ -15,7 +15,6 @@ function Navbar({ items }: NavbarProps) {
     return (
         <nav className='navbar'>
             <div className="navbar-left">
-                <ThemeSwitcher />
             </div>
 
             <div className="navbar-center">
@@ -34,6 +33,7 @@ function Navbar({ items }: NavbarProps) {
             </div>
 
             <div className="navbar-right">
+                <ThemeSwitcher />
             </div>
         </nav>
     )
