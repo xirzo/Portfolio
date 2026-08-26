@@ -10,7 +10,7 @@ export interface AnimatedHoverProps {
 
 function AnimatedHover({
     children,
-    scale = 1.02,
+    scale = 1.05,
     rotateMaxX: rotateMaxX = 16,
     rotateMaxY = 24
 }: AnimatedHoverProps) {
