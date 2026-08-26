@@ -1,4 +1,3 @@
-import ThemeSwitcher from '../../shared/themeSwitcher';
 import './navbar.css'
 import Button from '../../shared/button/button';
 
@@ -33,7 +32,6 @@ function Navbar({ items }: NavbarProps) {
             </div>
 
             <div className="navbar-right">
-                <ThemeSwitcher />
             </div>
         </nav>
     )

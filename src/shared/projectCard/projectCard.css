@@ -9,8 +9,23 @@
     color: inherit;
 }
 
+.project-link h2 {
+    color: white;
+    transition: letter-spacing 0.15s ease;
+}
+
+.project-link:hover h2 {
+    letter-spacing: 0.05em;
+}
+
+.project-title {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
 .project-link:hover {
-    color: var(--accent);
+    color: var(--primary);
 }
 
 .project-actions {

@@ -5,12 +5,12 @@
     border: var(--border-card);
     border-top: solid 1px var(--highlight);
     box-shadow: var(--shadow);
-    transition: background 0.05s, transform 0.05s;
+    transition: background 0.05s, box-shadow 0.05s;
 }
 
 .card:hover {
     background: var(--gradient-hover);
-    transform: translateY(1px) scale(1.02);
+    box-shadow: 0px 4px 8px hsla(0, 0%, 0%, 0.12), 0px 8px 16px hsla(0, 0%, 0%, 0.1);
 }
 
 .card>* {
