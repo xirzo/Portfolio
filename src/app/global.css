@@ -25,12 +25,12 @@ h6 {
 a {
     text-decoration: none;
     color: var(--primary);
-    transition: transform 0.18s cubic-bezier(.22, 1, .36, 1);
+    transition: color 0.15s ease, transform 0.15s ease;
 }
 
 a:hover {
-    transform: scale(1.02) translateY(-1px);
     color: var(--secondary);
+    transform: scale(1.02);
 }
 
 ul,
@@ -53,7 +53,7 @@ select {
 }
 
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     line-height: 1.5;
     font-weight: 400;
 

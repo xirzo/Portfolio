@@ -9,8 +9,23 @@
     color: inherit;
 }
 
+.project-link h2 {
+    color: white;
+    transition: color 0.15s ease;
+}
+
+.project-link:hover h2 {
+    color: var(--primary);
+}
+
+.project-title {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
 .project-link:hover {
-    color: var(--accent);
+    color: var(--primary);
 }
 
 .project-actions {
@@ -84,15 +99,16 @@ body.light .project-image-container:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin: 1rem 0;
+    margin: 0.75rem 0;
 }
 
 .tech-tag {
-    background: var(--accent);
-    color: var(--bg);
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
+    background: var(--bg-light);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
     font-weight: 500;
 }
 

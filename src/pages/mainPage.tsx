@@ -1,15 +1,13 @@
 import Greetings from "../widgets/greetings/greetings";
 import ProjectsSection from "../widgets/projectsSection";
-import Bio from "../widgets/bio/bio";
 import type { RefObject } from "react";
 
 interface MainPageProps {
     projectsSectionRef: RefObject<HTMLDivElement | null>;
-    bioSectionRef: RefObject<HTMLDivElement | null>;
     greetingsSectionRef: RefObject<HTMLDivElement | null>;
 }
 
-function MainPage({ projectsSectionRef, bioSectionRef, greetingsSectionRef }: MainPageProps) {
+function MainPage({ projectsSectionRef, greetingsSectionRef }: MainPageProps) {
     return (
         <div
             className="vertical-stack-container"
@@ -26,10 +24,6 @@ function MainPage({ projectsSectionRef, bioSectionRef, greetingsSectionRef }: Ma
                         behavior: 'smooth',
                         block: 'start'
                     })} />
-            </div>
-
-            <div ref={bioSectionRef}>
-                <Bio email={"garrytacffgh@gmail.com"} />
             </div>
 
             <div ref={projectsSectionRef}>
