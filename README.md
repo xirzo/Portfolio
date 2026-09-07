@@ -12,6 +12,11 @@ npm run dev
 
 # Deployment
 
+By default ci/cd builds the image and pushes it to *ghcr.io*, if you want to
+build it manually follow the next step.
+
+## Manual Build (Optional)
+
 ```sh
 docker build --build-arg VITE_BLOG_URL=https://blog.xirzo.ru -t ghcr.io/xirzo/portfolio:latest .
 ```
@@ -19,6 +24,11 @@ docker build --build-arg VITE_BLOG_URL=https://blog.xirzo.ru -t ghcr.io/xirzo/po
 ```sh
 docker push ghcr.io/xirzo/portfolio:latest
 ```
+
+## Deployment
+
+*docker-stack.yml* uses image from *ghcr*
+
 
 ```sh
 docker context use <context_name>
